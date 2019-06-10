@@ -3,15 +3,20 @@ import { connect } from "react-redux";
 
 class Timer extends Component {
 	render = () => {
-		console.log(this.props.sessionOrBreak);
 		let item = this.props;
+		let digitalDisplay;
+		digitalDisplay =
+			(item.currentTimer < 10
+				? "0" + String(item.currentTimer)
+				: item.currentTimer) +
+			":" +
+			item.currentSeconds;
+
 		return (
 			<div className="timer">
-				<h3 id="timer-label">Time Left:</h3>
+				<h3 id="timer-label">{item.timerLabel}</h3>
 				<div className="digital" id="time-left">
-					{item.sessionOrBreak === true
-						? item.currentSessionTime
-						: item.currentBreakTime}
+					{digitalDisplay}
 				</div>
 			</div>
 		);
@@ -21,7 +26,10 @@ const mapStateToProps = state => {
 	return {
 		sessionOrBreak: state.sessionOrBreak,
 		currentSessionTime: state.currentSessionTime,
-		currentBreakTime: state.currentBreakTime
+		currentBreakTime: state.currentBreakTime,
+		currentSeconds: state.currentSeconds,
+		timerLabel: state.timerLabel,
+		currentTimer: state.currentTimer
 	};
 };
 export default connect(mapStateToProps)(Timer);

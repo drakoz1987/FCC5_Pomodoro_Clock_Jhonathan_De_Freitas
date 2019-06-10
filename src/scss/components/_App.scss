@@ -1,0 +1,26 @@
+#App {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	padding: 10vw 0;
+	background-color: lightcyan;
+
+	@media (min-width: 660px) {
+		border-radius: 1rem;
+		height: 75vh;
+		width: 90vw;
+	}
+	@media (min-width: 880px) {
+		padding: 5vw 0;
+		width: 65vw;
+	}
+	@media (min-width: 1000px) {
+		padding: 0;
+		width: 50vw;
+	}
+}
+.app-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,18 @@
+.button-controller-container {
+	display: flex;
+	align-self: center;
+	justify-self: center;
+}
+.button-control {
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: gray;
+	padding: 1rem;
+}
+#reset {
+	color: red;
+}
+#start_stop {
+	color: green;
+}

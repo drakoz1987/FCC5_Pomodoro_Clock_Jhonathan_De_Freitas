@@ -1,0 +1,50 @@
+.button-pad {
+	display: grid;
+	grid-template-areas: "title title title" ". timer ." "container container container";
+	align-content: center;
+}
+.title {
+	grid-area: title;
+	display: flex;
+	align-self: center;
+	justify-self: center;
+}
+.digital-pad {
+	font-size: 2.5rem;
+	grid-area: timer;
+	padding: 0 1rem;
+	background-color: #000;
+	border-radius: 0.5rem;
+	color: white;
+	height: 3.5rem;
+	width: 5rem;
+	border: 1.2px solid black;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+.digit {
+	height: auto;
+}
+.button-pad-container {
+	grid-area: container;
+	height: auto;
+}
+.ind-button {
+	background: none;
+	border: none;
+	height: auto;
+	width: auto;
+	border: none;
+	padding: none;
+}
+.ind-button i {
+	font-size: 3rem;
+	color: rgb(73, 85, 223);
+	&:hover {
+		color: rgb(27, 27, 126);
+	}
+	&:active {
+		color: #ccc;
+	}
+}

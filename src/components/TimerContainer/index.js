@@ -5,8 +5,10 @@ const TimerContainer = () => {
 	return (
 		<div className="timer-container">
 			<Timer />
-			<ButtonControl name="Start-stop" id="start_stop" />
-			<ButtonControl name="Reset" id="reset" />
+			<div className="button-controller-container">
+				<ButtonControl name="Start-stop" id="start_stop" />
+				<ButtonControl name="Reset" id="reset" />
+			</div>
 		</div>
 	);
 };

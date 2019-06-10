@@ -11,8 +11,7 @@ const INITIAL_STATE = {
 		dec: "session-decrement",
 		len: "session-length",
 		length: "Session Length",
-		defaultValue: 25,
-		value: 0
+		defaultValue: 25
 	},
 	breaker: {
 		label: "break-label",
@@ -20,12 +19,16 @@ const INITIAL_STATE = {
 		dec: "break-decrement",
 		len: "break-length",
 		length: "Break Length",
-		defaultValue: 5,
-		value: 0
+		defaultValue: 5
 	},
-	currentSessionTime: "25:00",
-	currentBreakTime: "05:00",
-	sessionOrBreak: true
+	currentSessionTime: 25,
+	timerLabel: "Session",
+	currentBreakTime: 5,
+	currentTimer: 25,
+	currentSeconds: "00",
+	sessionOrBreak: true,
+	pauseOrRunning: false,
+	passes: 0
 };
 
 const store = createStore(
