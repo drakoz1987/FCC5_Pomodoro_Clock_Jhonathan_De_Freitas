@@ -25,7 +25,7 @@ class ButtonControl extends Component {
 						this.props.reset();
 					}
 					this.props.start();
-					window.myInterval = setInterval(this.props.changeSeconds, 50);
+					window.myInterval = setInterval(this.props.changeSeconds, 1000);
 				} else {
 					this.props.start();
 					clearInterval(window.myInterval);
